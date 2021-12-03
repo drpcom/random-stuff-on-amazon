@@ -1,0 +1,23 @@
+.outerBodyContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  flex-wrap: wrap;
+
+  margin-top: -100px;
+}
+
+.innerBodyContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 65%;
+}
+
+.innerBodyContainer > h1 {
+  background: gray;
+  width: 150px;
+  height: 200px;
+}
