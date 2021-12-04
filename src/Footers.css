@@ -1,7 +1,6 @@
-.sidebarContainer {
+.footersContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  padding: 8%;
+  width: 100%;
 }
