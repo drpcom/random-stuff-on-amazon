@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  height: 80vh;
+  /* height: 80vh; */
   flex-wrap: wrap;
 }
 
@@ -14,13 +14,7 @@
   /* width: 65%; */
   max-width: 50%;
   padding: 30px;
-}
-
-.items > h1 {
-  background: gray;
-  width: 200px;
-  height: 300px;
-  margin-bottom: 10px;
+  background: rgb(245, 245, 245, 0.7);
 }
 
 .dice {
@@ -32,5 +26,5 @@
 .dice > .MuiSvgIcon-root {
   height: 150px;
   width: 200px;
-  color: mediumpurple;
+  color: whitesmoke;
 }
