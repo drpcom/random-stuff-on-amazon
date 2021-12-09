@@ -19,35 +19,35 @@ const Body = () => {
             </div>
             <div className='items'>
                 <RandomItem 
+                id="8829530"
                 pic={hotwheel} 
-                title="Hotwheel Set" 
-                desc="This is an Ocean Avenue hotwheel set." 
-                rating="⭐⭐⭐⭐⭐"
-                price="$19.99" />
+                title="Race Track for Boys and Kids, 240PCS Flexible Zero Gravity Magic Car Tracks Glow in The Dark, Train Toys for 3 4 5 6 Year Old Boys Girls with LED Light Up..." 
+                rating={3}
+                price={19.99} />
                 <RandomItem 
+                id="8829530"
                 pic={sweater} 
-                title="Sweater" 
-                desc="The most comfortable sweater money can buy." 
-                rating="⭐⭐⭐⭐⭐"
-                price="$38.99" />
+                title="Sweaters for Women Lightweight V Neck Long" 
+                rating={5}
+                price={38.99} />
                 <RandomItem 
+                id="8829530"
                 pic={chocolates}
-                title="Chocolate Candy" 
-                desc="Perfect for holiday season." 
-                rating="⭐⭐⭐⭐⭐"
-                price="$5.99" />
+                title="Ferrero Rocher Collection, Fine Hazelnut Milk Chocolates, 48 Count, Gift Box, Assorted Coconut Candy and Chocolates," 
+                rating={4}
+                price={5.99} />
                 <RandomItem 
+                id="8829530"
                 pic={socks} 
-                title="Socks" 
-                desc="You get them as a gift every year. You know what this is."
-                rating="⭐⭐⭐⭐⭐" 
-                price="$10.99" />
+                title="Wool Socks for Women - 5 Pairs Warm Socks, Winter Socks" 
+                rating={2} 
+                price={10.99} />
                 <RandomItem 
+                id="8829530"
                 pic={oculus}
-                title="Oculus Rift" 
-                desc="This is the cool item." 
-                rating="⭐⭐⭐⭐⭐"
-                price="$249.99" />
+                title="Oculus Quest 2 — Advanced All-In-One Virtual Reality Headset — 128 GB" 
+                rating={5}
+                price={249.99} />
             </div>
             <Sidebar />
         </div>
