@@ -2,10 +2,11 @@
   width: 190px;
   min-height: 304px;
   background: white;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   font-size: 10px;
-  border-bottom: 3px solid lightgray;
   padding: 3px;
+  outline: 10px solid rgb(255, 255, 255, 0.3);
+  border-radius: 3px;
 
   line-height: 2em;
   font-family: Arial, Helvetica, sans-serif;
@@ -29,9 +30,13 @@
   max-height: 80px;
   width: 160px;
   overflow: hidden;
+  overflow-wrap: break-word;
   text-overflow: ellipsis;
   font-size: 0.6rem;
   color: #007185;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 .productRating {
