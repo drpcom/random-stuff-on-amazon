@@ -13,9 +13,16 @@ import oculus from './images/oculus.jpg';
 const Body = () => {
     return (
         <div className='bodyContainer'>
-            <div className="dice">
-            <CasinoIcon />
-            <h1>Roll!</h1>
+            <div className="bColumn1">
+                <div className="logo">
+                    <h1>Random Shit</h1>
+                    <h1>on Amazon</h1>
+                    <h1>hint: keep refreshing the page.</h1>
+                </div>
+                <div className="dice">
+                    <CasinoIcon />
+                    <h1>Roll!</h1>
+                </div>
             </div>
             <div className='items'>
                 <RandomItem 

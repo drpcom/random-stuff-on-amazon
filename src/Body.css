@@ -1,19 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Monofett&display=swap");
+
 .bodyContainer {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  /* height: 80vh; */
+  justify-content: center;
   flex-wrap: wrap;
+}
+
+.bColumn1 {
+  display: flex;
+  flex: 0.25;
+  flex-direction: column;
+}
+
+.logo {
+  font-family: "Monofett", cursive;
+  margin-top: 70px;
+  margin-bottom: 7rem;
+  text-align: center;
+  font-size: 33px;
+}
+
+.logo > h1:nth-child(3) {
+  font-size: 14px;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 .items {
   display: flex;
+  flex: 0.5;
+  padding: 30px;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /* width: 65%; */
-  max-width: 50%;
-  padding: 30px;
 }
 
 .dice {
