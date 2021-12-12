@@ -21,7 +21,12 @@
   font-size: 33px;
 }
 
-.logo > h1:nth-child(3) {
+.logo > h1 > .MuiSvgIcon-root {
+  font-size: 50px;
+  color: white;
+}
+
+.logo > h1:nth-child(4) {
   font-size: 14px;
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -47,4 +52,11 @@
   height: 150px;
   width: 200px;
   color: whitesmoke;
+}
+
+.bColumn3 {
+  display: flex;
+  flex: 0.25;
+  justify-content: center;
+  background: rgb(255, 255, 255, 0.3);
 }

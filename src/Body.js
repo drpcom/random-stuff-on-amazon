@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './Body.css';
 import Sidebar from './Sidebar';
 import CasinoIcon from '@material-ui/icons/Casino';
-import RandomItem from './RandomItem';
+import ProductCard from './ProductCard';
 
 const Body = () => {
     const [products, setProducts] = useState([]);
@@ -36,7 +36,8 @@ const Body = () => {
         <div className='bodyContainer'>
             <div className="bColumn1">
                 <div className="logo">
-                    <h1>Random Shit</h1>
+                    <h1>Random </h1>
+                    <h1>Sh{<CasinoIcon />}t</h1>
                     <h1>on Amazon</h1>
                     <h1>hint: keep refreshing the page.</h1>
                 </div>
@@ -49,7 +50,7 @@ const Body = () => {
                 {products.map((product, index) => {
                     if (index <= 4) {
                         return (
-                            <RandomItem
+                            <ProductCard
                             key={product.id}
                             id={product.id}
                             pic={product.image}
@@ -65,7 +66,9 @@ const Body = () => {
                     }
                 })}
                 </div>
-            <Sidebar />
+            <div className="bColumn3">
+                <Sidebar />
+            </div>
         </div>
     )
 }

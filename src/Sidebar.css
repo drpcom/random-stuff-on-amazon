@@ -2,15 +2,49 @@
 
 .sidebarContainer {
   display: flex;
-  flex: 0.25;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: rgb(255, 255, 255, 0.3);
 }
 
-.sidebarContainer > h1:nth-child(1) {
+.sidebarContainer > h1 {
   font-family: "Monofett", cursive;
   font-size: 65px;
   border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+  margin-bottom: 10px;
+}
+
+/* .savedProducts {
+  width: 80%;
+} */
+
+.singleSavedProduct {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 12px;
+}
+
+.singleSavedProduct > h1 {
+  padding: 10px;
+  color: whitesmoke;
+}
+
+.singleSavedProduct > p {
+  /* white-space: nowrap; */
+  overflow: hidden;
+  width: 200px;
+  /* display: flex; */
+  /* align-items: center; */
+
+  overflow-wrap: break-word;
+  /* text-overflow: ellipsis; */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.singleSavedProduct > h3 {
+  display: flex;
+  align-items: center;
+  padding: 10px;
 }

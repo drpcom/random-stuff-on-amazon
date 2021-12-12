@@ -1,7 +1,7 @@
 import React from 'react';
-import './RandomItem.css';
+import './ProductCard.css';
 
-const RandomItem = (props) => {
+const ProductCard = (props) => {
     return (
         <div className="productContainer">
             <div className="productImage">
@@ -22,4 +22,4 @@ const RandomItem = (props) => {
     )
 }
 
-export default RandomItem
+export default ProductCard;
