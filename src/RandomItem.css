@@ -1,4 +1,4 @@
-.randomItemContainer {
+.productContainer {
   width: 190px;
   min-height: 304px;
   background: white;
@@ -12,7 +12,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.randomItemContainer > h1 {
+.productContainer > h1 {
   padding-left: 10px;
 }
 

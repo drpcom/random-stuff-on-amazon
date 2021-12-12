@@ -13,7 +13,7 @@ const Body = () => {
         .then((json)=> setProducts(json))
     },[]);
 
-    function shuffle(array) {
+    function Shuffle(array) {
         let currentIndex = array.length,  randomIndex;
       
         // While there remain elements to shuffle...
@@ -30,7 +30,7 @@ const Body = () => {
       
         return array;
       }
-      shuffle(products);
+    Shuffle(products);
 
     return (
         <div className='bodyContainer'>
@@ -45,7 +45,7 @@ const Body = () => {
                     <h1>Roll!</h1>
                 </div>
             </div>
-            <div className='items'>
+            <div className='bColumn2'>
                 {products.map((product, index) => {
                     if (index <= 4) {
                         return (
@@ -70,4 +70,4 @@ const Body = () => {
     )
 }
 
-export default Body
+export default Body;

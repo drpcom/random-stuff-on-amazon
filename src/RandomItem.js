@@ -3,7 +3,7 @@ import './RandomItem.css';
 
 const RandomItem = (props) => {
     return (
-        <div className="randomItemContainer">
+        <div className="productContainer">
             <div className="productImage">
                 <img src={props.pic} alt={props.title} />
             </div>
