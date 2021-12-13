@@ -3,17 +3,32 @@ import './Body.css';
 import Sidebar from './Sidebar';
 import CasinoIcon from '@material-ui/icons/Casino';
 import ProductCard from './ProductCard';
+import LoadingSpinner from './LoadingSpinner';
 
 const Body = () => {
     const [products, setProducts] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
 
     useEffect(() => {
-        fetch("https://fakestoreapi.com/products")
-        .then((res)=> res.json())
-        .then((json)=> setProducts(json))
+        handleFetch();
     },[]);
+    
+    const handleFetch = () => {
+        setIsLoading(true);
+        fetch("https://fakestoreapi.com/products")
+        .then((response)=> response.json())
+        .then((json)=> { 
+            setProducts(json)
+            setIsLoading(false)
+        })
+        .catch(() => {
+            setErrorMessage("Unable to load products.");
+            setIsLoading(false);
+        })
+    }
 
-    function Shuffle(array) {
+    const Shuffle = (array) => {
         let currentIndex = array.length,  randomIndex;
       
         // While there remain elements to shuffle...
@@ -33,6 +48,8 @@ const Body = () => {
     Shuffle(products);
 
     return (
+        <div>
+        {isLoading ? <LoadingSpinner /> :
         <div className='bodyContainer'>
             <div className="bColumn1">
                 <div className="logo">
@@ -69,6 +86,7 @@ const Body = () => {
             <div className="bColumn3">
                 <Sidebar />
             </div>
+        </div>}
         </div>
     )
 }
