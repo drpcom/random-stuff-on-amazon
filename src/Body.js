@@ -48,8 +48,6 @@ const Body = () => {
     Shuffle(products);
 
     return (
-        <div>
-        {isLoading ? <LoadingSpinner /> :
         <div className='bodyContainer'>
             <div className="bColumn1">
                 <div className="logo">
@@ -64,7 +62,8 @@ const Body = () => {
                 </div>
             </div>
             <div className='bColumn2'>
-                {products.map((product, index) => {
+                {isLoading ? <LoadingSpinner /> :
+                products.map((product, index) => {
                     if (index <= 4) {
                         return (
                             <ProductCard
@@ -81,12 +80,12 @@ const Body = () => {
                             null
                         )
                     }
-                })}
+                })
+            }
                 </div>
             <div className="bColumn3">
                 <Sidebar />
             </div>
-        </div>}
         </div>
     )
 }
