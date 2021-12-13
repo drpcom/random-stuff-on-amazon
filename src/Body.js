@@ -52,7 +52,7 @@ const Body = () => {
             <div className="bColumn1">
                 <div className="logo">
                     <h1>Random </h1>
-                    <h1>Sh{<CasinoIcon />}t</h1>
+                    <h1>Sh{<CasinoIcon onClick={handleFetch} disabled={isLoading} />}t</h1>
                     <h1>on Amazon</h1>
                     <h1>hint: keep refreshing the page.</h1>
                 </div>
@@ -82,7 +82,8 @@ const Body = () => {
                     }
                 })
             }
-                </div>
+            </div>
+            {errorMessage && <div className="error">{errorMessage}</div>}
             <div className="bColumn3">
                 <Sidebar />
             </div>

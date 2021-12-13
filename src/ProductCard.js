@@ -2,8 +2,12 @@ import React from 'react';
 import './ProductCard.css';
 
 const ProductCard = (props) => {
+    const linkToProduct = () => {
+        window.open(`https://fakestoreapi.com/products/${props.id}`)
+    }
+
     return (
-        <div className="productContainer">
+        <div className="productContainer" onClick={linkToProduct}>
             <div className="productImage">
                 <img src={props.pic} alt={props.title} />
             </div>

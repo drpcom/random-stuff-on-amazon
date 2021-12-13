@@ -39,6 +39,11 @@
   -webkit-box-orient: vertical;
 }
 
+.productTitle:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .productRating {
   display: flex;
   font-size: 14px;
