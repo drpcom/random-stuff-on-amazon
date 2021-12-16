@@ -1,17 +1,19 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import './Body.css';
 import Sidebar from './Sidebar';
 import CasinoIcon from '@material-ui/icons/Casino';
 import ProductCard from './ProductCard';
 import LoadingSpinner from './LoadingSpinner';
+import {GlobalContext} from './GlobalState.js';
 
 const Body = () => {
-    const [products, setProducts] = useState([]);
+    const {products, setProducts} = useContext(GlobalContext);
     const [isLoading, setIsLoading] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
-
+    
     useEffect(() => {
         handleFetch();
+         //eslint-disable-next-line
     },[]);
     
     const handleFetch = () => {
@@ -26,7 +28,7 @@ const Body = () => {
             setErrorMessage("Unable to load products.");
             setIsLoading(false);
         })
-    }
+    } 
 
     const Shuffle = (array) => {
         let currentIndex = array.length,  randomIndex;
@@ -47,6 +49,35 @@ const Body = () => {
       }
     Shuffle(products);
 
+    const randomFiveProductCards = () => {
+        return (
+            <React.Fragment>
+            {products.map((product, index) => {
+                if (index <= 4) {
+                    return (
+                            <ProductCard
+                            key={product.id}
+                            id={product.id}
+                            pic={product.image}
+                            title={product.title}
+                            rating={3}
+                            price={product.price}
+                            />
+                    )
+            } else {
+                return (
+                    null
+                )
+            }
+            })
+            }
+            </React.Fragment>
+        )
+
+
+    }
+
+
     return (
         <div className='bodyContainer'>
             <div className="bColumn1">
@@ -62,26 +93,7 @@ const Body = () => {
                 </div>
             </div>
             <div className='bColumn2'>
-                {isLoading ? <LoadingSpinner /> :
-                products.map((product, index) => {
-                    if (index <= 4) {
-                        return (
-                            <ProductCard
-                            key={product.id}
-                            id={product.id}
-                            pic={product.image}
-                            title={product.title}
-                            rating={3}
-                            price={product.price}
-                            />
-                        )
-                    } else {
-                        return (
-                            null
-                        )
-                    }
-                })
-            }
+                {isLoading ? <LoadingSpinner /> : randomFiveProductCards()}
             </div>
             {errorMessage && <div className="error">{errorMessage}</div>}
             <div className="bColumn3">

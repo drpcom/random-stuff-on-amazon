@@ -2,6 +2,7 @@ import React from 'react';
 import './ProductCard.css';
 
 const ProductCard = (props) => {
+
     const linkToProduct = () => {
         window.open(`https://fakestoreapi.com/products/${props.id}`)
     }
@@ -21,6 +22,7 @@ const ProductCard = (props) => {
             </div>
             <div className="productPrice">
                 <h1>${props.price}</h1>
+                {console.log(props.title)}
             </div>
         </div>
     )
