@@ -1,9 +1,21 @@
 import React from 'react';
 import './Sidebar.css';
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+    console.log(props.products)
     return (
         <div className="sidebarContainer">
+        {props.products.map((product,index) => {
+            if (index <= 4) {
+                return (
+                    <button>{product.title}</button>
+                )
+            } else {
+                return (
+                    null
+                )
+            }
+        })}
             <h1>Top 5</h1>
             <div className="savedProducts">
                 <div className="singleSavedProduct">

@@ -1,13 +1,10 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Body.css';
 import Sidebar from './Sidebar';
 import CasinoIcon from '@material-ui/icons/Casino';
-import ProductCard from './ProductCard';
 import LoadingSpinner from './LoadingSpinner';
-import {GlobalContext} from './GlobalState.js';
 
-const Body = () => {
-    const {products, setProducts} = useContext(GlobalContext);
+const Body = (props) => {
     const [isLoading, setIsLoading] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
     
@@ -21,7 +18,7 @@ const Body = () => {
         fetch("https://fakestoreapi.com/products")
         .then((response)=> response.json())
         .then((json)=> { 
-            setProducts(json)
+            props.setProducts(json)
             setIsLoading(false)
         })
         .catch(() => {
@@ -30,52 +27,9 @@ const Body = () => {
         })
     } 
 
-    const Shuffle = (array) => {
-        let currentIndex = array.length,  randomIndex;
-      
-        // While there remain elements to shuffle...
-        while (currentIndex) {
-      
-          // Pick a remaining element...
-          randomIndex = Math.floor(Math.random() * currentIndex);
-          currentIndex--;
-      
-          // And swap it with the current element.
-          [array[currentIndex], array[randomIndex]] = [
-            array[randomIndex], array[currentIndex]];
-        }
-      
-        return array;
-      }
-    Shuffle(products);
-
-    const randomFiveProductCards = () => {
-        return (
-            <React.Fragment>
-            {products.map((product, index) => {
-                if (index <= 4) {
-                    return (
-                            <ProductCard
-                            key={product.id}
-                            id={product.id}
-                            pic={product.image}
-                            title={product.title}
-                            rating={3}
-                            price={product.price}
-                            />
-                    )
-            } else {
-                return (
-                    null
-                )
-            }
-            })
-            }
-            </React.Fragment>
-        )
 
 
-    }
+
 
 
     return (
@@ -93,11 +47,11 @@ const Body = () => {
                 </div>
             </div>
             <div className='bColumn2'>
-                {isLoading ? <LoadingSpinner /> : randomFiveProductCards()}
+                {isLoading ? <LoadingSpinner /> : props.randomFiveProductCards()}
             </div>
             {errorMessage && <div className="error">{errorMessage}</div>}
             <div className="bColumn3">
-                <Sidebar />
+                <Sidebar products={props.products} />
             </div>
         </div>
     )
