@@ -2,22 +2,28 @@ import React from 'react';
 import './Sidebar.css';
 
 const Sidebar = (props) => {
-    console.log(props.products)
+
+    const createElements = (n) => {
+        var elements = [];
+        for(let i =0; i < n; i++){
+            elements.push(i);
+        }
+        return elements;
+    }
+
     return (
         <div className="sidebarContainer">
-        {props.products.map((product,index) => {
-            if (index <= 4) {
-                return (
-                    <button>{product.title}</button>
-                )
-            } else {
-                return (
-                    null
-                )
-            }
-        })}
             <h1>Top 5</h1>
             <div className="savedProducts">
+            {props.isSaved.map((product) => {
+                return (
+                    <div className="singleSavedProduct">
+                        <h1 className="productRanking">{createElements(1)}</h1>
+                        <p className="specialSidebarProduct">{product}</p>
+                        <h3>X</h3>
+                    </div>
+                )
+            })}
                 <div className="singleSavedProduct">
                     <h1 className="productRanking">1</h1>
                     <p>Oculus Quest 2 — Advanced All-In-One Virtual Reality Headset — 128 GB</p>

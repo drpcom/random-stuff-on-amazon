@@ -6,6 +6,7 @@ import ProductCard from './ProductCard';
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [isSaved, setIsSaved] = useState([]);
 
   const Shuffle = (array) => {
     let currentIndex = array.length,  randomIndex;
@@ -39,6 +40,8 @@ Shuffle(products);
                         title={product.title}
                         rating={3}
                         price={product.price}
+                        isSaved={isSaved}
+                        setIsSaved={setIsSaved}
                         />
                 )
         } else {
@@ -59,6 +62,8 @@ Shuffle(products);
       products={products} 
       setProducts={setProducts}
       randomFiveProductCards={randomFiveProductCards}
+      isSaved={isSaved}
+      setIsSaved={setIsSaved}
       />
     </div>
   );

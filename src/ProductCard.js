@@ -7,12 +7,17 @@ const ProductCard = (props) => {
         window.open(`https://fakestoreapi.com/products/${props.id}`)
     }
 
+    const addProductToSidebar = () => {
+
+    }
+
     return (
-        <div className="productContainer" onClick={linkToProduct}>
+        <div className="productContainer">
             <div className="productImage">
                 <img src={props.pic} alt={props.title} />
             </div>
-            <div className="productTitle">
+            <button onClick={() => {props.setIsSaved([...props.isSaved, props.title])}}>Save this!</button>
+            <div className="productTitle" onClick={linkToProduct}>
                 <h1>{props.title}</h1>
             </div>
             <div className="productRating">
@@ -22,7 +27,6 @@ const ProductCard = (props) => {
             </div>
             <div className="productPrice">
                 <h1>${props.price}</h1>
-                {console.log(props.title)}
             </div>
         </div>
     )

@@ -51,7 +51,7 @@ const Body = (props) => {
             </div>
             {errorMessage && <div className="error">{errorMessage}</div>}
             <div className="bColumn3">
-                <Sidebar products={props.products} />
+                <Sidebar products={props.products} isSaved={props.isSaved} setIsSaved={props.setIsSaved} />
             </div>
         </div>
     )
