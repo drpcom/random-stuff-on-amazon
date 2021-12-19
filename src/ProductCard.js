@@ -21,7 +21,7 @@ const ProductCard = (props) => {
             </div>
             <div className="productRating">
                 {Array(props.rating).fill().map((_, i) => (
-                    <p>⭐</p>
+                    <p key={i}>⭐</p>
                 ))}
             </div>
             <div className="productPriceAndSave">
