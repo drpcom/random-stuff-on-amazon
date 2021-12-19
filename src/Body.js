@@ -41,10 +41,6 @@ const Body = (props) => {
                     <h1>on Amazon</h1>
                     <h1>hint: keep refreshing the page.</h1>
                 </div>
-                <div className="dice">
-                    <CasinoIcon />
-                    <h1>Roll!</h1>
-                </div>
             </div>
             <div className='bColumn2'>
                 {isLoading ? <LoadingSpinner /> : props.randomFiveProductCards()}

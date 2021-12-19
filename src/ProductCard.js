@@ -13,11 +13,10 @@ const ProductCard = (props) => {
 
     return (
         <div className="productContainer">
-            <div className="productImage">
+            <div className="productImage" onClick={linkToProduct}>
                 <img src={props.pic} alt={props.title} />
             </div>
-            <button onClick={() => {props.setIsSaved([...props.isSaved, props.title])}}>Save this!</button>
-            <div className="productTitle" onClick={linkToProduct}>
+            <div className="productTitle">
                 <h1>{props.title}</h1>
             </div>
             <div className="productRating">
@@ -25,8 +24,9 @@ const ProductCard = (props) => {
                     <p>⭐</p>
                 ))}
             </div>
-            <div className="productPrice">
+            <div className="productPriceAndSave">
                 <h1>${props.price}</h1>
+                <button onClick={() => {props.setIsSaved([...props.isSaved, props.title])}}>+ SAVE</button>
             </div>
         </div>
     )

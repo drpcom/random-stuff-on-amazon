@@ -26,6 +26,11 @@
   height: 200px;
 }
 
+.productImage:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 .productTitle {
   max-height: 80px;
   width: 160px;
@@ -49,6 +54,25 @@
   font-size: 14px;
 }
 
-.productPrice {
+.productPriceAndSave {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productPriceAndSave > h1 {
   color: #b12704 !important;
+}
+
+.productPriceAndSave > button {
+  color: rgb(40, 155, 201);
+  /* background: navy; */
+  border-radius: 2px;
+  padding: 5px 15px;
+  border: none;
+  font-weight: 700;
+}
+
+.productPriceAndSave > button:hover {
+  color: whitesmoke;
+  background: rgb(40, 155, 201);
 }
