@@ -7,16 +7,16 @@ const ProductCard = (props) => {
         window.open(`https://fakestoreapi.com/products/${props.id}`)
     }
 
-    const addProductToSidebar = () => {
+    // const addProductToSidebar = () => {
 
-    }
+    // }
 
     return (
         <div className="productContainer">
             <div className="productImage" onClick={linkToProduct}>
                 <img src={props.pic} alt={props.title} />
             </div>
-            <div className="productTitle">
+            <div className="productTitle" onClick={linkToProduct}>
                 <h1>{props.title}</h1>
             </div>
             <div className="productRating">

@@ -18,9 +18,9 @@ const Sidebar = (props) => {
         {props.isSaved.map((productTitle, index) => {
             return (
                 <div key={index} className="singleSavedProduct">
-                <h1 className="productRanking"><StarRateTwoTone /></h1>
-                <p className="specialSidebarProduct">{productTitle}</p>
-                <CancelIcon onClick={() => {props.setIsSaved(props.isSaved.filter((e) => (e !== productTitle)))}} />
+                    <h1 className="productPic"><StarRateTwoTone /></h1>
+                    <p className="specialSidebarProduct">{productTitle}</p>
+                    <h3><CancelIcon onClick={() => {props.setIsSaved(props.isSaved.filter((e) => (e !== productTitle)))}} /></h3>
                 </div>
                 )
             })}
