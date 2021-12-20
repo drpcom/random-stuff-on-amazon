@@ -1,26 +1,25 @@
 import React from 'react';
 import './Sidebar.css';
-import StarRateTwoTone from '@material-ui/icons/StarRateTwoTone';
 import CancelIcon from '@material-ui/icons/Cancel';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const Sidebar = (props) => {
 
-    // const removeItemHandler = (productTitle) => {
-    //     console.log(productTitle)
-    //     props.setIsSaved(props.isSaved.filter(item => item.productTitle == productTitle))
+    // const removeItemHandler = (productData) => {
+    //     console.log(productData)
+    //     props.setIsSaved(props.isSaved.filter(item => item.productData == productData))
     // }
 
     return (
         <div className="sidebarContainer">
         <ShoppingCartIcon />
         <div className="savedProducts">
-        {props.isSaved.map((productTitle, index) => {
+        {props.isSaved.map((productData, index) => {
             return (
                 <div key={index} className="singleSavedProduct">
-                    <h1 className="productPic"><StarRateTwoTone /></h1>
-                    <p className="specialSidebarProduct">{productTitle}</p>
-                    <h3><CancelIcon onClick={() => {props.setIsSaved(props.isSaved.filter((e) => (e !== productTitle)))}} /></h3>
+                    <img className="productPic" src={productData[2]} alt={productData[0]} /> 
+                    <p className="specialSidebarProduct" onClick={() => {window.open(`https://fakestoreapi.com/products/${productData[1]}`)}}>{productData[0]}</p>
+                    <h3><CancelIcon onClick={() => {props.setIsSaved(props.isSaved.filter((e) => (e !== productData)))}} /></h3>
                 </div>
                 )
             })}

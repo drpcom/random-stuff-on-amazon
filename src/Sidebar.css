@@ -21,13 +21,9 @@
 }
 
 .productPic {
+  width: 32px;
+  height: 40px;
   padding: 10px;
-}
-
-.productPic > .MuiSvgIcon-root {
-  font-size: 40px;
-  color: #383636;
-  background: #383636;
 }
 
 .singleSavedProduct > p {
@@ -42,6 +38,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  cursor: pointer;
 }
 
 .singleSavedProduct > h3 {

@@ -26,7 +26,7 @@ const ProductCard = (props) => {
             </div>
             <div className="productPriceAndSave">
                 <h1>${props.price}</h1>
-                <button onClick={() => {props.setIsSaved([...props.isSaved, props.title])}}>+ SAVE</button>
+                <button onClick={() => {props.setIsSaved([...props.isSaved, [props.title, props.id, props.pic]])}}>+ SAVE</button>
             </div>
         </div>
     )
