@@ -6,7 +6,11 @@ import ProductCard from './ProductCard';
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [isSaved, setIsSaved] = useState([]);
+  const [isSaved, setIsSaved] = useState(() => {
+    const saved = localStorage.getItem("isSaved");
+    const initialValue = JSON.parse(saved);
+    return initialValue || [];
+  });
 
   const Shuffle = (array) => {
     let currentIndex = array.length,  randomIndex;

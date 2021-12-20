@@ -10,8 +10,9 @@ const Body = (props) => {
     
     useEffect(() => {
         handleFetch();
-         //eslint-disable-next-line
-    },[]);
+        localStorage.setItem("isSaved", JSON.stringify(props.isSaved))
+        //eslint-disable-next-line
+    },[props.isSaved]);
     
     const handleFetch = () => {
         setIsLoading(true);
