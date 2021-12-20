@@ -1,6 +1,7 @@
 import React from 'react';
 import './ProductCard.css';
 import LoadingSpinner from './LoadingSpinner';
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
 
 const ProductCard = (props) => {
 
@@ -29,7 +30,7 @@ const ProductCard = (props) => {
             </div>
             <div className="productPriceAndSave">
                 <h1>${props.price}</h1>
-                <button onClick={() => {props.setIsSaved([...props.isSaved, [props.title, props.id, props.pic]])}}>+ SAVE</button>
+                <button onClick={() => {props.setIsSaved([...props.isSaved, [props.title, props.id, props.pic]])}} disabled={props.isSaved.length >= 7}><ShoppingBasketIcon /> SAVE</button>
             </div>
             </React.Fragment>
         }

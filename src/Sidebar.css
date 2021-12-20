@@ -52,6 +52,10 @@
   color: #383636 !important;
 }
 
+.singleSavedProduct > h3:hover {
+  color: rgb(240, 30, 30) !important;
+}
+
 /* .singleSavedProduct:nth-child(n + 4) {
   color: white;
 } */

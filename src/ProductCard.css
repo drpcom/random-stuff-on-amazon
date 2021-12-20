@@ -70,9 +70,20 @@
   padding: 5px 15px;
   border: none;
   font-weight: 700;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.productPriceAndSave > button > .MuiSvgIcon-root {
+  font-size: 14px;
+  margin-right: 5px;
 }
 
 .productPriceAndSave > button:hover {
   color: whitesmoke;
   background: rgb(40, 155, 201);
+}
+
+.productPriceAndSave > button:disabled {
+  display: none;
 }
