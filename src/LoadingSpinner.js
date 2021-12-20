@@ -3,10 +3,9 @@ import "./LoadingSpinner.css";
 
 const LoadingSpinner = () => {
   return (
-    <div className="SpinnerContainer">
-      <div className="LoadingSpinner">
-      </div>
-    </div>
+    <>
+      <div className="loader">Loading...</div>
+    </>
   );
 }
 

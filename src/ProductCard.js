@@ -1,5 +1,6 @@
 import React from 'react';
 import './ProductCard.css';
+import LoadingSpinner from './LoadingSpinner';
 
 const ProductCard = (props) => {
 
@@ -13,6 +14,8 @@ const ProductCard = (props) => {
 
     return (
         <div className="productContainer">
+        {props.isLoading ? <LoadingSpinner /> : 
+            <React.Fragment>
             <div className="productImage" onClick={linkToProduct}>
                 <img src={props.pic} alt={props.title} />
             </div>
@@ -28,6 +31,9 @@ const ProductCard = (props) => {
                 <h1>${props.price}</h1>
                 <button onClick={() => {props.setIsSaved([...props.isSaved, [props.title, props.id, props.pic]])}}>+ SAVE</button>
             </div>
+            </React.Fragment>
+        }
+        {props.errorMessage && <div className="error">{props.errorMessage}</div>}
         </div>
     )
 }

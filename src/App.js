@@ -6,6 +6,8 @@ import ProductCard from './ProductCard';
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [isSaved, setIsSaved] = useState(() => {
     const saved = localStorage.getItem("isSaved");
     const initialValue = JSON.parse(saved);
@@ -46,6 +48,8 @@ Shuffle(products);
                         price={product.price}
                         isSaved={isSaved}
                         setIsSaved={setIsSaved}
+                        isLoading={isLoading}
+                        setIsLoading={setIsLoading}
                         />
                 )
         } else {
@@ -68,6 +72,10 @@ Shuffle(products);
       randomFiveProductCards={randomFiveProductCards}
       isSaved={isSaved}
       setIsSaved={setIsSaved}
+      isLoading={isLoading}
+      setIsLoading={setIsLoading}
+      errorMessage={errorMessage}
+      setErrorMessage={setErrorMessage}
       />
     </div>
   );

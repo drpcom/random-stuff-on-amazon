@@ -1,12 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import './Body.css';
 import Sidebar from './Sidebar';
 import CasinoIcon from '@material-ui/icons/Casino';
-import LoadingSpinner from './LoadingSpinner';
 
 const Body = (props) => {
-    const [isLoading, setIsLoading] = useState(false);
-    const [errorMessage, setErrorMessage] = useState("");
     
     useEffect(() => {
         handleFetch();
@@ -15,16 +12,16 @@ const Body = (props) => {
     },[props.isSaved]);
     
     const handleFetch = () => {
-        setIsLoading(true);
+        props.setIsLoading(true);
         fetch("https://fakestoreapi.com/products")
         .then((response)=> response.json())
         .then((json)=> { 
             props.setProducts(json)
-            setIsLoading(false)
+            props.setIsLoading(false)
         })
         .catch(() => {
-            setErrorMessage("Unable to load products.");
-            setIsLoading(false);
+            props.setErrorMessage("Unable to load products.");
+            props.setIsLoading(false);
         })
     } 
 
@@ -38,15 +35,14 @@ const Body = (props) => {
             <div className="bColumn1">
                 <div className="logo">
                     <h1>Random </h1>
-                    <h1>Sh{<CasinoIcon onClick={handleFetch} disabled={isLoading} />}t</h1>
+                    <h1>Sh{<CasinoIcon onClick={handleFetch} disabled={props.isLoading} />}t</h1>
                     <h1>on Amazon</h1>
                     <h1>hint: keep refreshing the page.</h1>
                 </div>
             </div>
             <div className='bColumn2'>
-                {isLoading ? <LoadingSpinner /> : props.randomFiveProductCards()}
+                {props.randomFiveProductCards()}
             </div>
-            {errorMessage && <div className="error">{errorMessage}</div>}
             <div className="bColumn3">
                 <Sidebar products={props.products} isSaved={props.isSaved} setIsSaved={props.setIsSaved} />
             </div>

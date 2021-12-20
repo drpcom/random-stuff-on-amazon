@@ -10,13 +10,18 @@
   margin-bottom: 10px;
 }
 
+.savedProducts {
+  width: 90%;
+}
+
 .singleSavedProduct {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 12px;
+  margin-bottom: 19px;
   background: whitesmoke;
-  border-radius: 3px;
+  border-radius: 1px;
   color: #007185;
+  outline: 8px solid rgb(255, 255, 255, 0.3);
 }
 
 .productPic {
