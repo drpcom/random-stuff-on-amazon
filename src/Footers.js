@@ -4,7 +4,7 @@ import './Footers.css';
 const Footers = () => {
     return (
         <div className="footersContainer">
-            <h1>here are the footers. nothing here now.</h1>
+            <h4>background by loading.io</h4>
         </div>
     )
 }

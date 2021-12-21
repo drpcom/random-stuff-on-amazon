@@ -1,8 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Flamenco:wght@300&display=swap");
+
 .headerContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding-top: 10px;
-  display: none;
+  font-family: "Flamenco", cursive;
+  font-size: 30px;
+  color: rgb(255, 255, 255, 0.8);
+}
+
+.headerContainer > h5 {
+  font-size: 14px;
+  font-family: monospace;
+  margin-top: -20px;
 }

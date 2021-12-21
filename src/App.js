@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header';
 import Body from './Body';
 import ProductCard from './ProductCard';
+import Footers from './Footers';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -77,6 +78,7 @@ Shuffle(products);
       errorMessage={errorMessage}
       setErrorMessage={setErrorMessage}
       />
+      <Footers />
     </div>
   );
 }
