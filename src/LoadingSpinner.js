@@ -3,9 +3,9 @@ import "./LoadingSpinner.css";
 
 const LoadingSpinner = () => {
   return (
-    <>
+    <React.Fragment>
       <div className="loader">Loading...</div>
-    </>
+    </React.Fragment>
   );
 }
 

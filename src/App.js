@@ -15,7 +15,7 @@ function App() {
     return initialValue || [];
   });
 
-  const Shuffle = (array) => {
+  const Randomize = (array) => {
     let currentIndex = array.length,  randomIndex;
   
     // While there remain elements to shuffle...
@@ -32,9 +32,10 @@ function App() {
   
     return array;
   }
-Shuffle(products);
+Randomize(products);
 
-  const randomFiveProductCards = () => {
+// Render out five Product Card components.
+  const randomFiveProductCards = () => { 
     return (
         <React.Fragment>
         {products.map((product, index) => {

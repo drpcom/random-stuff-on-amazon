@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import './Body.css';
 import Sidebar from './Sidebar';
-import CasinoIcon from '@material-ui/icons/Casino';
 
 const Body = (props) => {
     
@@ -25,20 +24,9 @@ const Body = (props) => {
         })
     } 
 
-
-
-
-
-
     return (
         <div className='bodyContainer'>
             <div className="bColumn1">
-                <div className="logo">
-                    <h1>Random </h1>
-                    <h1>Sh{<CasinoIcon onClick={handleFetch} disabled={props.isLoading} />}t</h1>
-                    <h1>on Amazon</h1>
-                    <h1>hint: keep refreshing the page.</h1>
-                </div>
             </div>
             <div className='bColumn2'>
                 {props.randomFiveProductCards()}

@@ -9,10 +9,6 @@ const ProductCard = (props) => {
         window.open(`https://fakestoreapi.com/products/${props.id}`)
     }
 
-    // const addProductToSidebar = () => {
-
-    // }
-
     return (
         <div className="productContainer">
         {props.isLoading ? <LoadingSpinner /> : 
