@@ -24,7 +24,7 @@
 To run this project, install it locally using npm:
 
 ```
-$ cd ../my-project
+$ cd ../Cool-stuff-on-amazon
 $ npm install
 $ npm start
 ```
