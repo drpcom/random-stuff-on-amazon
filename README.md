@@ -1,4 +1,4 @@
-# Random Sh*t on Amazon
+# Random Stuff on Amazon
 > API project that displays random products from a fake store on every refresh. Products can be saved in the sidebar and persist via localStorage.
 > Web App [_here_](https://boring-aryabhata-688614.netlify.app/).
 
