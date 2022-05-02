@@ -17,7 +17,7 @@
 
 ## Demo
 
-![demo](https://firebasestorage.googleapis.com/v0/b/bookmaker-36cf0.appspot.com/o/rsoaScreen.gif?alt=media&token=584946a9-f723-49bd-bb9a-141e2b199d3a)
+![demo](https://firebasestorage.googleapis.com/v0/b/dreamy-app-f1406.appspot.com/o/rsoaScreen.gif?alt=media&token=a953356e-7807-41e7-b43a-e94c588fd333)
 
 ## Setup
 
